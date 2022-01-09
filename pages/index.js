@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/layout.module.css'
 
-export default function Home() {
+export default function Home({ articles }) {
+  console.log(articles)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,21 +14,34 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        bia
+        Home page
+        <p>{process.env.apiKey}</p>
+        <p>{process.env.customKey} hj</p>
+        <p>{process.env.API_KEY}</p>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      
     </div>
   )
+}
+
+
+
+
+export const getStaticProps = async() => {
+
+  const url = 'https://newsapi.org/v2/everything?' +
+          'q=Apple&' +
+          'from=2022-01-08&' +
+          'sortBy=popularity&' +
+          'f364b299c3c34d2981db94e06364ba5c';
+
+  const res = await fetch(url)
+  //const articles = JSON.parse(JSON.stringify(res))
+  //res.json()
+
+  return {
+    props: {
+      articles: await res.json(),
+    }
+  }
 }
