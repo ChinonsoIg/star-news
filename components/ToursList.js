@@ -3,11 +3,13 @@ import Image from 'next/image';
 import toursStyles from '../styles/tours.module.css'
 import ToursItem from './ToursItem';
 
+
 const ToursList = ({ tours }) => {
+
   return (
-    <ul>
+    <ul className={toursStyles.list}>
       {tours.map(tour => (
-        <li key={tour.id}>
+        <li key={tour.id} className={toursStyles.listItem}>
           <ToursItem 
             tour={tour}
           />
@@ -16,5 +18,6 @@ const ToursList = ({ tours }) => {
     </ul>
 	);
 }
+
 
 export default ToursList;
