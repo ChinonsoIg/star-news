@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <h1 className="title">
-        <span>StarDev</span> Newz
+        <span>Tourz </span> Site
       </h1>
       <style jsx>
         {`
