@@ -16,6 +16,7 @@ export default function Home({ tours }) {
       <ToursList tours={tours} />
       
     </div>
+    
   )
 }
 
