@@ -8,6 +8,7 @@ const ToursItem = ({ tour }) => {
   return (
     <>
       <Image src={fallback} alt='Tour'/>
+      {/* <Image src={tour.image} alt='Tour'/> */}
       <section className={toursStyles.tourFooter}>
         <div className={toursStyles.flexRow}>
           <h3>{tour.name}</h3>

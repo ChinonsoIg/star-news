@@ -57,6 +57,12 @@
   color: red;
   background-color: beige;
   border: 2px solid rgb(209, 24, 24);
-  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgb(209, 24, 24);
   border-radius: 5px;
 }

@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import Image from 'next/image';
 import toursStyles from '../styles/tours.module.css'
 import ToursItem from './ToursItem';
 
