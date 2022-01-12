@@ -23,7 +23,6 @@ export default function Home({ tours }) {
 
 // fetch on build time
 export const getStaticProps = async() => {
-  // const url1 = `https://jsonplaceholder.typicode.com/posts?_limit=6`;
   
   const url = `https://course-api.com/react-tours-project`;
   

@@ -13,6 +13,7 @@ const Header = () => {
         {`
           .title {
             color: teal;
+            borderBottom: '3px solid teal'
           }
         `}
       </style>
