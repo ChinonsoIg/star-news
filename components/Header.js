@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import headerStyles from '../styles/header.module.css'
+import headerStyles from '../styles/Header.module.css'
 
 
 const Header = () => {
 
   return (
     <div>
-      <h1 className="title">
+      <h1 className={headerStyles.title}>
         <span>Tourz </span> Site
       </h1>
       <style jsx>

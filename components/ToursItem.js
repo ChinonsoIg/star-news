@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image';
-import toursStyles from '../styles/tours.module.css';
+import toursStyles from '../styles/Tours.module.css';
 import fallback from '../public/images/fallback.jpg'
 
 const ToursItem = ({ tour }) => {
@@ -17,13 +17,12 @@ const ToursItem = ({ tour }) => {
         <div className={toursStyles.flexCol}>
           <small className={toursStyles.justifyText}>
             {tour.info.substring(0, 220)}....
-            <Link href='/tours/[id]' as={`/tours/${tour.id}`}>      
+            <Link href='/tours/[id]' as={`/tours/${tour.id}`}>  
               <a>
                 <span className={toursStyles.readMore}>Find out more</span>
               </a>
             </Link>
           </small>
-          <button className={toursStyles.btn}>Not Interested</button>
         </div>
       </section>
     </>
