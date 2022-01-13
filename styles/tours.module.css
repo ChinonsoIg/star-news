@@ -16,6 +16,7 @@
 
 .tourFooter {
   padding: 20px;
+  /* border: 2px solid red; */
 }
 
 .flexRow {
@@ -32,7 +33,7 @@
 }
 
 .flexCol {
-  height: 150px;
+  height: 80px;
   padding: 0 0 10px 0;
   display: flex;
   flex-flow: column nowrap;
@@ -41,28 +42,13 @@
   /* border: 2px solid red; */
 }
 
-.justifyText {  
+.justifyText {
   text-align: justify;
 }
 
 .readMore {
-  font-weight: 600px;
+  font-weight: 500;
   color: teal;
-}
-
-.btn {
-  font-size: 16px;
-  word-spacing: 0.5em;
-  padding: 8px;
-  color: red;
-  background-color: beige;
-  border: 2px solid rgb(209, 24, 24);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  color: white;
-  background-color: rgb(209, 24, 24);
-  border-radius: 5px;
+  font-style: italic;
+  font-size: medium;
 }

@@ -1,7 +1,7 @@
 import { useRouter  } from "next/router";
 import Image from "next/image";
-import toursStyles from '../../../styles/tours.module.css'
-import styles from '../../../styles/layout.module.css'
+import toursStyles from '../../../styles/Tours.module.css'
+import layoutStyles from '../../../styles/Layout.module.css'
 import fallback from '../../../public/images/fallback.jpg'
 
 const Tour = ({ tours, paths }) => {
@@ -13,7 +13,7 @@ const Tour = ({ tours, paths }) => {
   const filteredTour = tours.filter(tour => tour.id === id);
   
   return (
-    <div className={styles.container}>
+    <div className={layoutStyles.container}>
       {/* <p>&larr; back</p> */}
       <ul className={toursStyles.list}>
         {filteredTour.map(tour => (
@@ -82,7 +82,7 @@ export const getStaticPaths = async () => {
       id: id.toString()
     }
   }))
-  console.log('paths: ', paths)
+  // console.log('paths: ', paths)
   
   return {
     paths,

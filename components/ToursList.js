@@ -1,4 +1,4 @@
-import toursStyles from '../styles/tours.module.css'
+import toursStyles from '../styles/Tours.module.css'
 import ToursItem from './ToursItem';
 
 

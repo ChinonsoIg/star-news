@@ -1,17 +1,19 @@
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  margin: 0 auto 12px;
+  font-size: 2rem;
+  padding: 8px;
   text-align: center;
+  color: teal;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width:20%;
+  height: 4px;/* slight higher to work around rounding errors(?) on some zoom levels in some browsers. */
+  background-color:teal;
+  position: absolute;
+  left: 35%;
+  bottom: -3px;
+  border-radius: 5px;
 }
